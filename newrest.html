@@ -1,18 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Restaurantes</title>
 </head>
 <body class="bg-orange-100 font-serif">
-    <nav class="bg-yellow-300 text-black p-4"> 
-        <div class="container mx=auto flex justify-between items-center">
+    <nav class="h-14 bg-linear-65 from-yellow-500 to-orange-200 text-black p-4"> 
+        <div class="container mx=auto flex justify-between items-center ">
             <h1 class="text-2xl font-bold">Find Food</h1>
             <div class="space-x-4">
-            <a href="#home.html" class="hover:text-orange-600">Inicio</a>
-            <a href="#search.html" class="hover:text-orange-600">Busqueda</a>
-            <a href="#newrest.html" class="hover:text-orange-600">Nuevo Restaurante</a>
-            </div>
+            <a href="home.html" class="hover:text-orange-600">Inicio</a>
+            <a href="search.html" class="hover:text-orange-600">Busqueda</a>
+            <a href="newrest.html" class="hover:text-orange-600">Nuevo Restaurante</a>
+            </div>          
         </div>
+    </nav>
+
+    <main class="container mx-auto p-6 max-w-3xl">
+        <h2 class="text-2xl text-center text-orange-700 font mb-6">Agregar Nuevo Restaurante</h2>
+    
+        <div class="bg-white shadow-lg rounded-xl p-6">
+          <form id="restForm" class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Nombre</label>
+              <input type="text" name="nombre" class="w-full p-2 border border-orange-200 rounded" required />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Descripción</label>
+              <textarea name="descripcion" class="w-full p-2 border border-orange-200 rounded" required></textarea>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Dirección</label>
+              <input type="text" name="direccion" class="w-full p-2 border border-orange-200 rounded" required />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Teléfono</label>
+              <input type="tel" name="telefono" class="w-full p-2 border border-orange-200 rounded" required />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">URL de Imagen</label>
+              <input type="url" name="imagen" class="w-full p-2 border border-orange-200 rounded" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Etiquetas</label>
+              <input type="text" name="etiquetas" class="w-full p-2 border border-orange-200 rounded" />
+            </div>
+            <button type="submit" class="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600">
+              Agregar Restaurante
+            </button>
+          </form>
+        </div>
+      </main>
+
+    
+
+    <script src="./js/script.js"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</body>            
+</html>
